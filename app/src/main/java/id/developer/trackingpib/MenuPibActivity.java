@@ -23,6 +23,7 @@ public class MenuPibActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_pib);
+        getSupportActionBar().setTitle("Menu Tahap PIB");
 
         preferences = this.getSharedPreferences(getString(R.string.CREDENTIAL), Context.MODE_PRIVATE);
         userStatus = preferences.getString(getString(R.string.GET_USER_STATUS),null);

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddTahapanActivity"></activity>
+        <activity android:name=".ListDetailPibActivity"></activity>
+        <activity android:name=".AddTahapanActivity" />
         <activity android:name=".AddPibActivity" />
         <activity android:name=".ListPibActivity" />
         <activity android:name=".SearchListPib" />

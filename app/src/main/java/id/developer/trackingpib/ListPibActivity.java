@@ -73,6 +73,7 @@ public class ListPibActivity extends AppCompatActivity implements ListTahap1Adap
         progressBar = findViewById(R.id.progres_bar);
         progressBar.setVisibility(View.GONE);
 
+        setActionbarTitle();
 
         bindView();
         getListData();
@@ -111,6 +112,33 @@ public class ListPibActivity extends AppCompatActivity implements ListTahap1Adap
             }
         });
 
+    }
+
+    private void setActionbarTitle(){
+        if (flag.equals(ConstantUtil.tahap1)){
+            getSupportActionBar().setTitle("List Tahap 1");
+
+        }
+
+        if (flag.equals(ConstantUtil.tahap2)){
+            getSupportActionBar().setTitle("List Tahap 2");
+
+        }
+
+        if (flag.equals(ConstantUtil.tahap3)){
+            getSupportActionBar().setTitle("List Tahap 3");
+
+        }
+
+        if (flag.equals(ConstantUtil.tahap4)){
+            getSupportActionBar().setTitle("List Tahap 4");
+
+        }
+
+        if (flag.equals(ConstantUtil.tahap5)){
+            getSupportActionBar().setTitle("List Tahap 5");
+
+        }
     }
 
     private void bindView(){
@@ -165,7 +193,6 @@ public class ListPibActivity extends AppCompatActivity implements ListTahap1Adap
 
 
     }
-
 
     private void getTahap1Data(Call<ResponseBody> callDataApi){
         callDataApi.enqueue(new Callback<ResponseBody>() {
@@ -385,47 +412,47 @@ public class ListPibActivity extends AppCompatActivity implements ListTahap1Adap
 //    TAHAP 1
     @Override
     public void onClick(Tahap1Model dataPosition) {
-        ArrayList<Tahap1Model> tahapList = new ArrayList<>();
-        tahapList.add(dataPosition);
+        Intent intent = new Intent(ListPibActivity.this, ListDetailPibActivity.class);
+        intent.putExtra("flag", flag);
+        intent.putExtra("pib", dataPosition.getNoPib());
 
-        Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList(getString(R.string.GET_SELECTED_ITEM), tahapList);
+        startActivity(intent);
 
     }
 //    TAHAP 2
     @Override
     public void onClick(Tahap2Model dataPosition) {
-        ArrayList<Tahap2Model> tahapList = new ArrayList<>();
-        tahapList.add(dataPosition);
+        Intent intent = new Intent(ListPibActivity.this, ListDetailPibActivity.class);
+        intent.putExtra("flag", flag);
+        intent.putExtra("pib", dataPosition.getNoPib());
 
-        Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList(getString(R.string.GET_SELECTED_ITEM), tahapList);
+        startActivity(intent);
     }
 //    TAHAP 3
     @Override
     public void onClick(Tahap3Model dataPosition) {
-        ArrayList<Tahap3Model> tahapList = new ArrayList<>();
-        tahapList.add(dataPosition);
+        Intent intent = new Intent(ListPibActivity.this, ListDetailPibActivity.class);
+        intent.putExtra("flag", flag);
+        intent.putExtra("pib", dataPosition.getNoPib());
 
-        Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList(getString(R.string.GET_SELECTED_ITEM), tahapList);
+        startActivity(intent);
     }
 //    TAHAP 4
     @Override
     public void onClick(Tahap4Model dataPosition) {
-        ArrayList<Tahap4Model> tahapList = new ArrayList<>();
-        tahapList.add(dataPosition);
+        Intent intent = new Intent(ListPibActivity.this, ListDetailPibActivity.class);
+        intent.putExtra("flag", flag);
+        intent.putExtra("pib", dataPosition.getNoPib());
 
-        Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList(getString(R.string.GET_SELECTED_ITEM), tahapList);
+        startActivity(intent);
     }
 //    TAHAP 5
     @Override
     public void onClick(Tahap5Model dataPosition) {
-        ArrayList<Tahap5Model> tahapList = new ArrayList<>();
-        tahapList.add(dataPosition);
+        Intent intent = new Intent(ListPibActivity.this, ListDetailPibActivity.class);
+        intent.putExtra("flag", flag);
+        intent.putExtra("pib", dataPosition.getNoPib());
 
-        Bundle bundle = new Bundle();
-        bundle.putParcelableArrayList(getString(R.string.GET_SELECTED_ITEM), tahapList);
+        startActivity(intent);
     }
 }

@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ListDetailPibActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/list_pib_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/message_pib"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Message"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Data Pib"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/pib"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="18sp"
+                        android:text="No PIB : "
+                        android:textColor="#f1f1f1"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:id="@+id/no_pib_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/pib"
+                        android:text="PIB"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                    <TextView
+                        android:id="@+id/kpbc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/no_pib_detail"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="KPBC : "
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/kpbc_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/no_pib_detail"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/kpbc"
+                        android:text="KPBC"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                    <TextView
+                        android:id="@+id/nama_importir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="18sp"
+                        android:text="Nama Importir : "
+                        android:textColor="#f1f1f1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/kpbc_detail"/>
+
+                    <TextView
+                        android:id="@+id/nama_importir_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/kpbc_detail"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/nama_importir"
+                        android:text="Nama Importir"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                    <TextView
+                        android:id="@+id/nama_ppjk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="18sp"
+                        android:text="Nama_PPJK : "
+                        android:textColor="#f1f1f1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/nama_importir_detail"/>
+
+                    <TextView
+                        android:id="@+id/nama_ppjk_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nama_importir_detail"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/nama_ppjk"
+                        android:text="Nama PPJK"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="18sp"
+                        android:text="Status : "
+                        android:textColor="#f1f1f1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/nama_ppjk_detail"/>
+
+                    <TextView
+                        android:id="@+id/status_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nama_ppjk_detail"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/nama_ppjk"
+                        android:text="Status"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                    <TextView
+                        android:id="@+id/deskripsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="18sp"
+                        android:text="Deskripsi : "
+                        android:textColor="#f1f1f1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/status_detail"/>
+
+                    <TextView
+                        android:id="@+id/deskripsi_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/status_detail"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/nama_ppjk"
+                        android:text="Deskripsi"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/message_tahap1"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Message"
+                android:textAlignment="textStart"
+                android:textColor="#f1f1f1"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Tahap 1"
+                android:textAlignment="textStart"
+                android:textColor="#f1f1f1"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/pib_tahap1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="18sp"
+                    android:text="No PIB : "
+                    android:textColor="#f1f1f1"
+                    android:layout_alignParentLeft="true"/>
+
+                <TextView
+                    android:id="@+id/no_pib_tahap1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toEndOf="@+id/pib_tahap1"
+                    android:text="PIB"
+                    android:textColor="#f1f1f1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textAlignment="textEnd"/>
+
+                <TextView
+                    android:id="@+id/invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/no_pib_tahap1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="invoice : "
+                    android:textColor="#f1f1f1"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/invoice_tahap1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/no_pib_tahap1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toEndOf="@+id/invoice"
+                    android:text="invoice"
+                    android:textColor="#f1f1f1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textAlignment="textEnd"/>
+
+                <TextView
+                    android:id="@+id/packing_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="18sp"
+                    android:text="Packing List : "
+                    android:textColor="#f1f1f1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/invoice_tahap1"/>
+
+                <TextView
+                    android:id="@+id/packing_list_tahap1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/invoice_tahap1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toEndOf="@+id/packing_list"
+                    android:text="Nama Importir"
+                    android:textColor="#f1f1f1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textAlignment="textEnd"/>
+
+                <TextView
+                    android:id="@+id/bill_of_lading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="18sp"
+                    android:text="Bill of Lading : "
+                    android:textColor="#f1f1f1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/packing_list_tahap1"/>
+
+                <TextView
+                    android:id="@+id/bill_of_lading_tahap1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/packing_list_tahap1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toEndOf="@+id/bill_of_lading"
+                    android:text="bill_of_lading"
+                    android:textColor="#f1f1f1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textAlignment="textEnd"/>
+
+                <TextView
+                    android:id="@+id/e_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="18sp"
+                    android:text="E - Form : "
+                    android:textColor="#f1f1f1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/bill_of_lading_tahap1"/>
+
+                <Button
+                    android:id="@+id/e_form_tahap1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bill_of_lading_tahap1"
+                    android:layout_toEndOf="@+id/e_form"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Lihat E-Form"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/message_tahap2"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Message"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Tahap 2"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/pib_tahap2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="18sp"
+                        android:text="No PIB : "
+                        android:textColor="#f1f1f1"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:id="@+id/no_pib_tahap2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/pib_tahap2"
+                        android:text="PIB"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                    <TextView
+                        android:id="@+id/status_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/no_pib_tahap2"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Status : "
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/status_tahap2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/no_pib_tahap2"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/status_"
+                        android:text="status"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/message_tahap3"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Message"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Tahap 3"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/pib_tahap3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="18sp"
+                        android:text="No PIB : "
+                        android:textColor="#f1f1f1"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:id="@+id/no_pib_tahap3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/pib_tahap3"
+                        android:text="PIB"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                    <TextView
+                        android:id="@+id/harga_pajak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/no_pib_tahap3"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Harga Pajak : "
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/harga_pajak_tahap3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/no_pib_tahap3"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/harga_pajak"
+                        android:text="harga pajak"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/message_tahap4"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Message"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Tahap 4"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/pib_tahap4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="18sp"
+                        android:text="No PIB : "
+                        android:textColor="#f1f1f1"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:id="@+id/no_pib_tahap4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/pib_tahap4"
+                        android:text="PIB"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                    <TextView
+                        android:id="@+id/status_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/no_pib_tahap4"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Status : "
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/status_tahap4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/no_pib_tahap4"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/status_4"
+                        android:text="status"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="16dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/message_tahap5"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Message"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Tahap 5"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/pib_tahap5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="18sp"
+                        android:text="No PIB : "
+                        android:textColor="#f1f1f1"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:id="@+id/no_pib_tahap5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/pib_tahap5"
+                        android:text="PIB"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                    <TextView
+                        android:id="@+id/status_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/no_pib_tahap5"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="Status : "
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/status_tahap5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/no_pib_tahap5"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toEndOf="@+id/status_5"
+                        android:text="status"
+                        android:textColor="#f1f1f1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</ScrollView>
