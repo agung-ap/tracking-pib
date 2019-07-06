@@ -143,7 +143,7 @@ public class ListDetailPibActivity extends AppCompatActivity {
                         statusTahap2.setText(tahap2.getString("status"));
                     }
 
-                    if (tahap2.length() == 0){
+                    if (tahap3.length() == 0){
                         messageTahap3.setVisibility(View.VISIBLE);
                         messageTahap3.setText("Belum Sampai Tahapan Ini");
                         layoutTahap3.setVisibility(View.GONE);
@@ -152,7 +152,7 @@ public class ListDetailPibActivity extends AppCompatActivity {
                         hargaPajakTahap3.setText(tahap3.getString("harga_pajak"));
                     }
 
-                    if (tahap2.length() == 0){
+                    if (tahap4.length() == 0){
                         messageTahap4.setVisibility(View.VISIBLE);
                         messageTahap4.setText("Belum Sampai Tahapan Ini");
                         layoutTahap4.setVisibility(View.GONE);
@@ -161,7 +161,7 @@ public class ListDetailPibActivity extends AppCompatActivity {
                         statusTahap4.setText(tahap4.getString("status"));
                     }
 
-                    if (tahap2.length() == 0){
+                    if (tahap5.length() == 0){
                         messageTahap5.setVisibility(View.VISIBLE);
                         messageTahap5.setText("Belum Sampai Tahapan Ini");
                         layoutTahap5.setVisibility(View.GONE);
