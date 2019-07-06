@@ -112,7 +112,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:id="@+id/poliklinik_register"
+            android:id="@+id/save_pib"
             style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

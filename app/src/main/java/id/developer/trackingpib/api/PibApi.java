@@ -12,6 +12,7 @@ import retrofit2.http.Body;
 
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface PibApi {
     @Headers({
@@ -50,6 +51,9 @@ public interface PibApi {
     @POST("/inserttahap5.php")
     Call<ResponseBody> insertTahap5(@Body Tahap5Request request);
 
+
+    @POST("/searchpib.php")
+    Call<ResponseBody> searchPib(@Query("no_pib") String noPib);
 
 }
 
