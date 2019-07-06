@@ -11,8 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChatRoom"></activity>
-        <activity android:name=".ChatDetailActivity" />
+        <activity android:name=".AddTahapanActivity"></activity>
+        <activity android:name=".AddPibActivity" />
+        <activity android:name=".ListPibActivity" />
+        <activity android:name=".SearchListPib" />
+        <activity android:name=".ChatRoom" />
+        <activity android:name=".MenuPibActivity" />
         <activity android:name=".ChatListActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity">

@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference databaseReference;
 
     private CardView chat;
+    private CardView pib;
+    private CardView aboutUs;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void bindView(){
         chat = findViewById(R.id.chat_card);
+        pib = findViewById(R.id.data_pib_card);
+        aboutUs = findViewById(R.id.about_us_card);
     }
 
     private void cardMenu(){
@@ -74,6 +79,13 @@ public class MainActivity extends AppCompatActivity {
                 }else {
                     startActivity(new Intent(MainActivity.this, ChatListActivity.class));
                 }
+            }
+        });
+
+        pib.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MenuPibActivity.class));
             }
         });
     }

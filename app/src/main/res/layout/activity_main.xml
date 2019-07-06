@@ -5,7 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/data_pib_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/pib_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Pib"
+            android:layout_margin="16dp"
+            android:textStyle="bold"
+            android:textColor="#f1f1f1"
+            android:maxLength="50"
+            android:textSize="32sp"/>
+
+    </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
         android:id="@+id/chat_card"
@@ -21,15 +48,42 @@
         app:layout_constraintRight_toRightOf="parent">
 
             <TextView
-                android:id="@+id/title_list"
+                android:id="@+id/chat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Chat"
                 android:layout_margin="16dp"
                 android:textStyle="bold"
-                android:textColor="#212121"
+                android:textColor="#f1f1f1"
                 android:maxLength="50"
                 android:textSize="32sp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/about_us_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/about_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About us"
+            android:layout_margin="16dp"
+            android:textStyle="bold"
+            android:textColor="#f1f1f1"
+            android:maxLength="50"
+            android:textSize="32sp"/>
+
     </android.support.v7.widget.CardView>
 
 </LinearLayout>
