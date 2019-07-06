@@ -34,6 +34,6 @@ public class RetrofitBuilder {
     }
 
     public static Retrofit getApiService(){
-        return RetrofitBuilder.getClient(   baseUrl);
+        return RetrofitBuilder.getClient(baseUrl);
     }
 }

@@ -27,6 +27,19 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Data Pib"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/message_pib"
                     android:visibility="gone"
                     android:layout_width="match_parent"
@@ -41,20 +54,8 @@
                     android:textSize="21sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:text="Data Pib"
-                    android:textAlignment="textStart"
-                    android:textColor="#f1f1f1"
-                    android:textSize="21sp"
-                    android:textStyle="bold" />
-
                 <RelativeLayout
+                    android:id="@+id/layout_pib"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="8dp"
@@ -258,6 +259,19 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Tahap 1"
+                android:textAlignment="textStart"
+                android:textColor="#f1f1f1"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/message_tahap1"
                 android:visibility="gone"
                 android:layout_width="match_parent"
@@ -272,20 +286,8 @@
                 android:textSize="21sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:text="Tahap 1"
-                android:textAlignment="textStart"
-                android:textColor="#f1f1f1"
-                android:textSize="21sp"
-                android:textStyle="bold" />
-
             <RelativeLayout
+                android:id="@+id/layout_tahap1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="8dp"
@@ -453,6 +455,19 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Tahap 2"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/message_tahap2"
                     android:visibility="gone"
                     android:layout_width="match_parent"
@@ -467,20 +482,8 @@
                     android:textSize="21sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:text="Tahap 2"
-                    android:textAlignment="textStart"
-                    android:textColor="#f1f1f1"
-                    android:textSize="21sp"
-                    android:textStyle="bold" />
-
                 <RelativeLayout
+                    android:id="@+id/layout_tahap2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="8dp"
@@ -565,6 +568,19 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Tahap 3"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/message_tahap3"
                     android:visibility="gone"
                     android:layout_width="match_parent"
@@ -579,20 +595,8 @@
                     android:textSize="21sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:text="Tahap 3"
-                    android:textAlignment="textStart"
-                    android:textColor="#f1f1f1"
-                    android:textSize="21sp"
-                    android:textStyle="bold" />
-
                 <RelativeLayout
+                    android:id="@+id/layout_tahap3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="8dp"
@@ -677,6 +681,19 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Tahap 4"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/message_tahap4"
                     android:visibility="gone"
                     android:layout_width="match_parent"
@@ -691,20 +708,8 @@
                     android:textSize="21sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:text="Tahap 4"
-                    android:textAlignment="textStart"
-                    android:textColor="#f1f1f1"
-                    android:textSize="21sp"
-                    android:textStyle="bold" />
-
                 <RelativeLayout
+                    android:id="@+id/layout_tahap4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="8dp"
@@ -790,6 +795,19 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="Tahap 5"
+                    android:textAlignment="textStart"
+                    android:textColor="#f1f1f1"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/message_tahap5"
                     android:visibility="gone"
                     android:layout_width="match_parent"
@@ -804,20 +822,8 @@
                     android:textSize="21sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:text="Tahap 5"
-                    android:textAlignment="textStart"
-                    android:textColor="#f1f1f1"
-                    android:textSize="21sp"
-                    android:textStyle="bold" />
-
                 <RelativeLayout
+                    android:id="@+id/layout_tahap5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="8dp"

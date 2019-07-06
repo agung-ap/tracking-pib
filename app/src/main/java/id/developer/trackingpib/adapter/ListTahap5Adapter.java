@@ -25,8 +25,8 @@ public class ListTahap5Adapter extends RecyclerView.Adapter<ListTahap5Adapter.Vi
         tahapList = new ArrayList<>();
     }
 
-    public void setData(List<Tahap5Model> pibList) {
-        this.tahapList = pibList;
+    public void setData(List<Tahap5Model> tahapList) {
+        this.tahapList = tahapList;
         notifyDataSetChanged();
     }
 
@@ -62,6 +62,7 @@ public class ListTahap5Adapter extends RecyclerView.Adapter<ListTahap5Adapter.Vi
         public void onClick(View v) {
             listener.onClick(tahapList.get(getAdapterPosition()));
         }
+
 
     }
 
