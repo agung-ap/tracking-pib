@@ -12,6 +12,7 @@ import android.support.v7.widget.CardView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -64,8 +65,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void bindView(){
         chat = findViewById(R.id.chat_card);
+        TextView chatText = findViewById(R.id.chat);
         pib = findViewById(R.id.data_pib_card);
         aboutUs = findViewById(R.id.about_us_card);
+
+        if (userStatus.equals("USER")){
+            chatText.setText("Chat Admin");
+
+        }else {
+            chatText.setText("List Chat");
+        }
     }
 
     private void cardMenu(){
