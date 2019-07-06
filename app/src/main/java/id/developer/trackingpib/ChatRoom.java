@@ -41,7 +41,7 @@ public class ChatRoom extends AppCompatActivity {
     private String uid, userStatus;
     private String username;
     private List<Message> messageList;
-
+    TextView nama,isi,isi2;
     LinearLayout layout;
     RelativeLayout layout2;
     ImageView sendButton;
@@ -114,10 +114,10 @@ public class ChatRoom extends AppCompatActivity {
                 String status = map.get("userStatus").toString();
 
                 if(status.equals("USER")){
-                    addMessageBox(userName + " :-\n" + message, 1);
+                    addMessageBox(userName,userName + " :-\n" + message, 1);
                 }
                 else{
-                    addMessageBox("admin" + " :-\n" + message, 2);
+                    addMessageBox("Admin","admin" + " :-\n" + message, 2);
                 }
             }
 
@@ -155,23 +155,32 @@ public class ChatRoom extends AppCompatActivity {
     }
 
 
-    public void addMessageBox(String message, int type){
+    public void addMessageBox(String namas,String message, int type){
+        View chat = getLayoutInflater().inflate(R.layout.chat, null);
+
+        nama = chat.findViewById(R.id.name);
+        isi  = chat.findViewById(R.id.isi);
+        isi2  = chat.findViewById(R.id.isi2);
+
         TextView textView = new TextView(ChatRoom.this);
-        textView.setText(message);
+        nama.setText(namas);
+        isi.setText(message);
+        isi2.setText(message);
 
         LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         lp2.weight = 1.0f;
 
         if(type == 1) {
             lp2.gravity = Gravity.RIGHT;
-            textView.setBackgroundResource(R.drawable.outchat);
+            isi.setVisibility(View.GONE);
+
         }
         else{
             lp2.gravity = Gravity.LEFT;
-            textView.setBackgroundResource(R.drawable.inchat);
+            isi2.setVisibility(View.GONE);
         }
-        textView.setLayoutParams(lp2);
-        layout.addView(textView);
+        chat.setLayoutParams(lp2);
+        layout.addView(chat);
         scrollView.fullScroll(View.FOCUS_DOWN);
     }
 
