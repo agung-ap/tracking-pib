@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("beranda");
+        getSupportActionBar().setTitle("Main Menu Tracking PIB");
 
         preferences = this.getSharedPreferences(getString(R.string.CREDENTIAL), Context.MODE_PRIVATE);
         userStatus = preferences.getString(getString(R.string.GET_USER_STATUS),null);

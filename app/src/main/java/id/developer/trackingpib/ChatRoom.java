@@ -53,7 +53,7 @@ public class ChatRoom extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_room);
-        getSupportActionBar().setTitle("chat room");
+        getSupportActionBar().setTitle("Ruang Chat");
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
