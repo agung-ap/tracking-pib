@@ -6,4 +6,240 @@
     android:layout_height="match_parent"
     tools:context=".SearchListPib">
 
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:hint="Cari dengan no PIB"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/search_button"
+        style="?android:buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:text="Cari"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/search"
+        app:layout_constraintRight_toRightOf="@+id/search"
+        app:layout_constraintLeft_toLeftOf="@+id/search"/>
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/search_button"
+        app:layout_constraintRight_toRightOf="@+id/search_button"
+        app:layout_constraintLeft_toLeftOf="@+id/search_button">
+
+        <TextView
+            android:id="@+id/tahap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:text="Tahap : "
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/tahap_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@+id/pib"
+            android:text="Tahap"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"/>
+
+        <TextView
+            android:id="@+id/pib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:text="No PIB : "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tahap_detail"/>
+
+        <TextView
+            android:id="@+id/no_pib_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@+id/pib"
+            android:layout_below="@+id/tahap_detail"
+            android:text="PIB"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:id="@+id/kpbc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_pib_detail"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:text="KPBC : "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/kpbc_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_pib_detail"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@+id/kpbc"
+            android:text="KPBC"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"/>
+
+        <TextView
+            android:id="@+id/nama_importir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:text="Nama Importir : "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/kpbc_detail"/>
+
+        <TextView
+            android:id="@+id/nama_importir_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kpbc_detail"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@+id/nama_importir"
+            android:text="Nama Importir"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"/>
+
+        <TextView
+            android:id="@+id/nama_ppjk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:text="Nama_PPJK : "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/nama_importir_detail"/>
+
+        <TextView
+            android:id="@+id/nama_ppjk_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nama_importir_detail"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@+id/nama_ppjk"
+            android:text="Nama PPJK"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:text="Status : "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/nama_ppjk_detail"/>
+
+        <TextView
+            android:id="@+id/status_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nama_ppjk_detail"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@+id/nama_ppjk"
+            android:text="Status"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"/>
+
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18sp"
+            android:text="Deskripsi : "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/status_detail"/>
+
+        <TextView
+            android:id="@+id/deskripsi_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/status_detail"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@+id/nama_ppjk"
+            android:text="Deskripsi"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"/>
+
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
