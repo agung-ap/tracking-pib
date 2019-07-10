@@ -131,10 +131,14 @@ public class AddTahapanActivity extends AppCompatActivity {
                     if (array.length() == 0){
                         dialog.dismiss();
                         Toast.makeText(AddTahapanActivity.this, "Pib berhasil ditambahkan", Toast.LENGTH_SHORT).show();
+                    }else{
+                        Toast.makeText(AddTahapanActivity.this, "Data PIB tidak sesuai", Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
+                    dialog.dismiss();
                     e.printStackTrace();
                 } catch (IOException e) {
+                    dialog.dismiss();
                     e.printStackTrace();
                 }
 

@@ -4,6 +4,7 @@ package id.developer.trackingpib;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.os.Bundle;
 
 import android.support.annotation.NonNull;
@@ -12,6 +13,7 @@ import android.support.v7.widget.CardView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -65,15 +67,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void bindView(){
         chat = findViewById(R.id.chat_card);
-        TextView chatText = findViewById(R.id.chat);
+        ImageView user = findViewById(R.id.chatadmin);
+        ImageView admin = findViewById(R.id.listchat);
         pib = findViewById(R.id.data_pib_card);
         aboutUs = findViewById(R.id.about_us_card);
 
         if (userStatus.equals("USER")){
-            chatText.setText("Chat Admin");
-
+            admin.setVisibility(View.GONE);
         }else {
-            chatText.setText("List Chat");
+            user.setVisibility(View.GONE);
         }
     }
 
