@@ -35,6 +35,7 @@
         app:layout_constraintRight_toRightOf="@+id/search"
         app:layout_constraintLeft_toLeftOf="@+id/search"/>
 
+
     <RelativeLayout
         android:id="@+id/search_layout"
         android:layout_width="match_parent"
@@ -42,6 +43,8 @@
         android:layout_marginTop="32dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:padding="10dp"
+        android:background="@color/cardview_light_background"
         app:layout_constraintTop_toBottomOf="@+id/search_button"
         app:layout_constraintRight_toRightOf="@+id/search_button"
         app:layout_constraintLeft_toLeftOf="@+id/search_button">
@@ -239,7 +242,22 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textAlignment="textEnd"/>
+        <Button
+            android:id="@+id/deskripsi_tahapan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Deskripsi Tahapan"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/cardview_light_background"
+            android:layout_below="@+id/deskripsi_detail"
+
+            />
 
     </RelativeLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>

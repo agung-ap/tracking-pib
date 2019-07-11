@@ -1,12 +1,16 @@
 package id.developer.trackingpib;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 
@@ -24,7 +28,7 @@ import retrofit2.Response;
 
 public class SearchListPib extends AppCompatActivity {
     private EditText search;
-    private Button searchButton;
+    private Button searchButton,deskripsiTahapan;
     private RelativeLayout searchLayout;
 
     private TextView tahap, noPib, kpbc, namaImportir, namaPpjk, status, deskripsi;
@@ -43,6 +47,17 @@ public class SearchListPib extends AppCompatActivity {
                 searchPib(search.getText().toString().trim());
             }
         });
+
+        deskripsiTahapan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SearchListPib.this, ListDetailPibActivity.class);
+                intent.putExtra("flag", "");
+                intent.putExtra("pib", search.getText().toString().trim());
+
+                startActivity(intent);
+            }
+        });
     }
 
     private void bindView(){
@@ -57,9 +72,14 @@ public class SearchListPib extends AppCompatActivity {
         namaPpjk = findViewById(R.id.nama_ppjk_detail);
         status = findViewById(R.id.status_detail);
         deskripsi = findViewById(R.id.deskripsi_detail);
+        deskripsiTahapan = findViewById(R.id.deskripsi_tahapan);
     }
 
     private void searchPib(String pib){
+        final ProgressDialog progressDialog = new ProgressDialog(SearchListPib.this);
+        progressDialog.setMessage("Please wait...");
+        progressDialog.show();
+
         PibApi pibApi = RetrofitBuilder.getApiService().create(PibApi.class);
         Call<ResponseBody> callPibApi = pibApi.searchPib(pib);
         callPibApi.enqueue(new Callback<ResponseBody>() {
@@ -67,7 +87,7 @@ public class SearchListPib extends AppCompatActivity {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
                 try {
-                    JSONObject object = new JSONObject(response.body().string());
+                        JSONObject object = new JSONObject(response.body().string());
                     JSONObject pib = object.getJSONObject("pib");
 
                     searchLayout.setVisibility(View.VISIBLE);
@@ -85,6 +105,7 @@ public class SearchListPib extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                progressDialog.dismiss();
             }
 
             @Override

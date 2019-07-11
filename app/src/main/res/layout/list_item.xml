@@ -5,28 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/no_pib"
+    <android.support.v7.widget.CardView
+        android:id="@+id/list_pib_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="no pib"
-        android:textSize="21sp"
-        style="@style/TextAppearance.AppCompat.Display2"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:foreground="?android:attr/selectableItemBackground">
 
-    <TextView
-        android:id="@+id/kpbc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="kpbc"
-        android:textSize="21sp"
-        style="@style/TextAppearance.AppCompat.Display2"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/cardview_light_background">
+            <TextView
+                android:id="@+id/no_pib"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="no pib"
+                android:textSize="21sp"
+                style="@style/TextAppearance.AppCompat.Display2"/>
+
+            <TextView
+                android:id="@+id/kpbc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="kpbc"
+                android:textSize="21sp"
+                style="@style/TextAppearance.AppCompat.Display2"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
 
     <View
         android:layout_width="match_parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
         android:layout_height="2dp"
         android:background="#212121"/>
 

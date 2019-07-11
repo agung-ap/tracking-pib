@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().setTitle("login");
+//        getSupportActionBar().setTitle("login");
 
         loginEmail = (EditText) findViewById(R.id.girisEmail);
         loginPassword = (EditText) findViewById(R.id.girisParola);

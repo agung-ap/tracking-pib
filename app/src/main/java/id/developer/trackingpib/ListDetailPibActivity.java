@@ -67,16 +67,16 @@ public class ListDetailPibActivity extends AppCompatActivity {
         formETahap1 = findViewById(R.id.e_form_tahap1);
 
         noPibTahap2 = findViewById(R.id.no_pib_tahap2);
-        statusTahap2 = findViewById(R.id.status_);
+        statusTahap2 = findViewById(R.id.status_tahap2);
 
         noPibTahap3 = findViewById(R.id.no_pib_tahap3);
         hargaPajakTahap3 = findViewById(R.id.harga_pajak_tahap3);
 
         noPibTahap4 = findViewById(R.id.no_pib_tahap4);
-        statusTahap4 = findViewById(R.id.status_4);
+        statusTahap4 = findViewById(R.id.status_tahap4);
 
         noPibTahap5 = findViewById(R.id.no_pib_tahap5);
-        statusTahap5 = findViewById(R.id.status_5);
+        statusTahap5 = findViewById(R.id.status_tahap5);
 //        layout
         layoutPib = findViewById(R.id.layout_pib);
         layoutTahap1 = findViewById(R.id.layout_tahap1);
@@ -135,12 +135,39 @@ public class ListDetailPibActivity extends AppCompatActivity {
                     }
 
                     if (tahap2.length() == 0){
-                        messageTahap1.setVisibility(View.VISIBLE);
-                        messageTahap1.setText("Belum Sampai Tahapan Ini");
-                        layoutTahap1.setVisibility(View.GONE);
+                        messageTahap2.setVisibility(View.VISIBLE);
+                        messageTahap2.setText("Belum Sampai Tahapan Ini");
+                        layoutTahap2.setVisibility(View.GONE);
                     }else {
-                        noPibTahap2.setText(tahap1.getString("no_pib"));
-                        statusTahap2.setText(tahap1.getString("no_pib"));
+                        noPibTahap2.setText(tahap2.getString("no_pib"));
+                        statusTahap2.setText(tahap2.getString("status"));
+                    }
+
+                    if (tahap3.length() == 0){
+                        messageTahap3.setVisibility(View.VISIBLE);
+                        messageTahap3.setText("Belum Sampai Tahapan Ini");
+                        layoutTahap3.setVisibility(View.GONE);
+                    }else {
+                        noPibTahap3.setText(tahap3.getString("no_pib"));
+                        hargaPajakTahap3.setText(tahap3.getString("harga_pajak"));
+                    }
+
+                    if (tahap4.length() == 0){
+                        messageTahap4.setVisibility(View.VISIBLE);
+                        messageTahap4.setText("Belum Sampai Tahapan Ini");
+                        layoutTahap4.setVisibility(View.GONE);
+                    }else {
+                        noPibTahap4.setText(tahap4.getString("no_pib"));
+                        statusTahap4.setText(tahap4.getString("status"));
+                    }
+
+                    if (tahap5.length() == 0){
+                        messageTahap5.setVisibility(View.VISIBLE);
+                        messageTahap5.setText("Belum Sampai Tahapan Ini");
+                        layoutTahap5.setVisibility(View.GONE);
+                    }else {
+                        noPibTahap5.setText(tahap5.getString("no_pib"));
+                        statusTahap5.setText(tahap5.getString("status"));
                     }
 
 

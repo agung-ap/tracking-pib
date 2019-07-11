@@ -29,7 +29,7 @@
         <activity android:name=".MenuPibActivity" />
         <activity android:name=".ChatListActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
