@@ -36,11 +36,11 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class AddTahapanActivity extends AppCompatActivity {
-    private TextInputLayout pibLayout, invoiceLayout, packingListLayout, billLadingLayout, hargaPajakLayout;
+    private TextInputLayout pibLayout, invoiceLayout,  hargaPajakLayout;
     private TextView statusTitle;
-    private EditText noPib, invoice, packingList, billOfLading, hargaPajak;
+    private EditText noPib, invoice,  hargaPajak;
     private AppCompatSpinner status;
-    private Button chooseFile, tahapanSave;
+    private Button packingListLayout, billLadingLayout, chooseFile, tahapanSave,packingList, billOfLading;
 
     private String flag;
 
@@ -66,8 +66,8 @@ public class AddTahapanActivity extends AppCompatActivity {
                 if (flag.equals(ConstantUtil.tahap1)){
                     request1.setNo_pib(noPib.getText().toString());
                     request1.setInvoice(invoice.getText().toString());
-                    request1.setPacking_list(packingList.getText().toString());
-                    request1.setBill_of_lading(billOfLading.getText().toString());
+                    request1.setPacking_list("URL Packing List");
+                    request1.setBill_of_lading("URL Bill of Lading");
                     flg = 1;
                 }
 
@@ -156,8 +156,8 @@ public class AddTahapanActivity extends AppCompatActivity {
         // layout
         pibLayout = findViewById(R.id.layout_pib);
         invoiceLayout = findViewById(R.id.layout_invoice);
-        packingListLayout = findViewById(R.id.layout_packing_list);
-        billLadingLayout = findViewById(R.id.layout_bill_lading);
+        packingListLayout = findViewById(R.id.packing_list_add);
+        billLadingLayout = findViewById(R.id.bill_of_lading_add);
         hargaPajakLayout = findViewById(R.id.layout_pajak);
 
         noPib = findViewById(R.id.no_pib_add);
