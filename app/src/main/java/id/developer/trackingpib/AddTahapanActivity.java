@@ -1,18 +1,31 @@
 package id.developer.trackingpib;
 
+import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatSpinner;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.storage.StorageReference;
+
 import id.developer.trackingpib.util.ConstantUtil;
 
 public class AddTahapanActivity extends AppCompatActivity {
+    private static final String TAG = AddTahapanActivity.class.getName();
+    private static final int PICK_PDF_REQUEST = 1;
+
     private TextInputLayout pibLayout, invoiceLayout, packingListLayout, billLadingLayout, hargaPajakLayout;
     private TextView statusTitle;
     private EditText noPib, invoice, packingList, billOfLading, hargaPajak;
@@ -21,6 +34,11 @@ public class AddTahapanActivity extends AppCompatActivity {
 
     private String flag;
 
+    private ProgressDialog progressDialog;
+    private StorageReference storageReference;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +46,8 @@ public class AddTahapanActivity extends AppCompatActivity {
 
         flag = getIntent().getStringExtra("flag");
         bindView();
+
+        progressDialog = new ProgressDialog(this);
 
         tahapanSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +71,22 @@ public class AddTahapanActivity extends AppCompatActivity {
                 if (flag.equals(ConstantUtil.tahap5)){
 
                 }
+            }
+        });
+
+        chooseFile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int readExternalStoragePermission = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE);
+                if(readExternalStoragePermission != PackageManager.PERMISSION_GRANTED)
+                {
+                    String requirePermission[] = {Manifest.permission.READ_EXTERNAL_STORAGE};
+                    ActivityCompat.requestPermissions(AddTahapanActivity.this, requirePermission, PICK_PDF_REQUEST);
+                }else {
+                    chooseFile();
+
+                }
+
             }
         });
 
@@ -116,8 +152,27 @@ public class AddTahapanActivity extends AppCompatActivity {
         }
     }
 
+    private void chooseFile() {
+        startActivityForResult(new Intent(AddTahapanActivity.this, PickMultipleFileActivity.class)
+                , 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == PICK_PDF_REQUEST && resultCode == RESULT_OK
+                && data != null && data.getData() != null){
+
+            Bundle bundle = getIntent().getExtras();
+            String [] url = bundle.getStringArray("url");
+
+            for (int i = 0; i < url.length; i++){
+                Log.i(TAG, "url file : " + url);
+            }
 
 
-
+        }
+    }
 
 }
