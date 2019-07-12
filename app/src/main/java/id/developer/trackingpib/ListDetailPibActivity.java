@@ -1,5 +1,7 @@
 package id.developer.trackingpib;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,13 +32,13 @@ public class ListDetailPibActivity extends AppCompatActivity {
     private TextView messagePib, messageTahap1, messageTahap2, messageTahap3, messageTahap4, messageTahap5;
 
     private TextView noPib, kpbc, namaImportir, namaPpjk, status, deskripsi;
-    private TextView noPibTahap1, invoiceTahap1, packingListTahap1, billOfladingTahap1;
+    private TextView noPibTahap1, invoiceTahap1;
     private TextView noPibTahap2, statusTahap2;
     private TextView noPibTahap3, hargaPajakTahap3;
     private TextView noPibTahap4, statusTahap4;
     private TextView noPibTahap5, statusTahap5;
 
-    private Button formETahap1;
+    private Button formETahap1, packingListTahap1, billOfladingTahap1;
 
 
     @Override
@@ -130,8 +132,40 @@ public class ListDetailPibActivity extends AppCompatActivity {
                     }else {
                         noPibTahap1.setText(tahap1.getString("no_pib"));
                         invoiceTahap1.setText(tahap1.getString("invoice"));
-                        packingListTahap1.setText(tahap1.getString("packing_list"));
-                        billOfladingTahap1.setText(tahap1.getString("bill_of_lading"));
+                        final String url_packinglist = tahap1.getString("packing_list");
+                        final String url_billoflading = tahap1.getString("bill_of_lading");
+                        final String url_forme = tahap1.getString("form_E");
+
+                        packingListTahap1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent httpIntent = new Intent(Intent.ACTION_VIEW);
+                                httpIntent.setData(Uri.parse(url_packinglist));
+
+                                startActivity(httpIntent);
+                            }
+                        });
+
+                        billOfladingTahap1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent httpIntent = new Intent(Intent.ACTION_VIEW);
+                                httpIntent.setData(Uri.parse(url_billoflading));
+
+                                startActivity(httpIntent);
+                            }
+                        });
+
+                        formETahap1.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent httpIntent = new Intent(Intent.ACTION_VIEW);
+                                httpIntent.setData(Uri.parse(url_forme));
+
+                                startActivity(httpIntent);
+                            }
+                        });
+
                     }
 
                     if (tahap2.length() == 0){

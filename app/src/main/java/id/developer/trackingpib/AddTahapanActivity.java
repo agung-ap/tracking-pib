@@ -163,7 +163,7 @@ public class AddTahapanActivity extends AppCompatActivity {
 
         PibApi pibApi = RetrofitBuilder.getApiService().create(PibApi.class);
         Call<ResponseBody> callPibApi = null;
-
+        Log.e(TAG, "SAVEPIRREQ: "+request);
         if (flg==1){
             callPibApi = pibApi.insertTahap1(request);
         }else if(flg==2){
@@ -188,6 +188,7 @@ public class AddTahapanActivity extends AppCompatActivity {
                     }else{
                         Toast.makeText(AddTahapanActivity.this, "Data PIB tidak sesuai", Toast.LENGTH_SHORT).show();
                     }
+                    Log.e(TAG, "RESPONSEADD: "+response );
                 } catch (JSONException e) {
                     dialog.dismiss();
                     e.printStackTrace();

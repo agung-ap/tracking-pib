@@ -365,22 +365,18 @@
                     android:layout_alignParentLeft="true"
                     android:layout_below="@+id/invoice_tahap1"/>
 
-                <TextView
+
+                <Button
                     android:id="@+id/packing_list_tahap1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="245dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/invoice_tahap1"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
                     android:layout_marginEnd="8dp"
                     android:layout_toEndOf="@+id/packing_list"
-                    android:text="Nama Importir"
-                    android:textColor="#f1f1f1"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textAlignment="textEnd"/>
+                    android:text="Lihat Bill of Lading" />
 
                 <TextView
                     android:id="@+id/bill_of_lading"
@@ -395,22 +391,17 @@
                     android:layout_alignParentLeft="true"
                     android:layout_below="@+id/packing_list_tahap1"/>
 
-                <TextView
+                <Button
                     android:id="@+id/bill_of_lading_tahap1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="245dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/packing_list_tahap1"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="0dp"
                     android:layout_marginEnd="8dp"
                     android:layout_toEndOf="@+id/bill_of_lading"
-                    android:text="bill_of_lading"
-                    android:textColor="#f1f1f1"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textAlignment="textEnd"/>
+                    android:text="Lihat Bill of Lading" />
 
                 <TextView
                     android:id="@+id/e_form"
