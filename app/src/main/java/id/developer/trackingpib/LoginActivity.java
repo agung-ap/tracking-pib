@@ -40,18 +40,16 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
     private EditText loginEmail,loginPassword;
     private Button loginButton,registerButton,newPassButton;
-//    private static final int RC_SIGN_IN = 9001;
-//    private SignInButton signInButton;
     private FirebaseAuth auth;
     private FirebaseDatabase database;
 
     private ProgressDialog progressDialog;
-//    GoogleApiClient mGoogleApiClient;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//        getSupportActionBar().setTitle("login");
+        getSupportActionBar().setTitle("login");
 
         loginEmail = (EditText) findViewById(R.id.girisEmail);
         loginPassword = (EditText) findViewById(R.id.girisParola);
@@ -62,16 +60,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
 
-//        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-//                .requestIdToken(getString(R.string.default_web_client_id))
-//                .requestEmail()
-//                .build();
-//
-//        mGoogleApiClient = new GoogleApiClient.Builder(this)
-//                .enableAutoManage(LoginActivity.this,this)
-//                .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
-//                .build();
-
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,6 +69,11 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 if (TextUtils.isEmpty(txtemail) || TextUtils.isEmpty(txtpass)){
                     Toast.makeText(LoginActivity.this,"Data Tidak Lengkap", Toast.LENGTH_SHORT).show();
                 }else {
+
+                    progressDialog = new ProgressDialog(LoginActivity.this);
+                    progressDialog.setMessage("Logging in...");
+                    progressDialog.show();
+                    progressDialog.setCanceledOnTouchOutside(false);
 
                     auth.signInWithEmailAndPassword(txtemail,txtpass)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -96,12 +89,13 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                                                         .child("userStatus").getValue(String.class);
 
                                                 if (status.equals("ADMIN")){
-
+                                                    progressDialog.dismiss();
                                                     //Toast.makeText(LoginActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
                                                     GlobalFunction.addUidAndUserStatusPref(LoginActivity.this, uid,"ADMIN");
                                                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
                                                     finish();
                                                 }else {
+                                                    progressDialog.dismiss();
                                                     GlobalFunction.addUidAndUserStatusPref(LoginActivity.this, uid,"USER");
                                                     //Toast.makeText(LoginActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
                                                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
